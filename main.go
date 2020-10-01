@@ -1,7 +1,7 @@
 package main 
 
 import (
-	 
+	"github.com/youthtrouble/effective-octo-spork" 
 	"fmt"
 	"flag"
 	"os"
@@ -20,5 +20,7 @@ func main() {
 
 	data := []byte(args[0])
 	hash256 := crypto.newHash256(data)
+	hash224 := crypto.newHash224(data)
 
+	fmt.Printf("The SHA224 and SHA256 checksums of the given data are %x and %x resectively" hash224, hash256)
 }
